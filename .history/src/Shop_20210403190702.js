@@ -28,6 +28,7 @@ export const Shop = () => {
     axios
       .get('https://jsonplaceholder.typicode.com/posts')
       .then((res) => setData(res.data));
+
     console.log(data.splice(0, 5));
   }, []);
 
@@ -37,7 +38,7 @@ export const Shop = () => {
     <div>
       <ul>
         {data.map((item) => {
-          return <li key={item.id}>{item.title}</li>;
+          return <li key={item.id}>{item.body}</li>;
         })}
       </ul>
     </div>

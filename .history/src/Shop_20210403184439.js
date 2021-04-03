@@ -37,9 +37,14 @@ export const Shop = () => {
     <div>
       <ul>
         {data.map((item) => {
-          return <li key={item.id}>{item.title}</li>;
+          return <li key={item.id}>{item.body}</li>;
         })}
       </ul>
     </div>
   );
+};
+
+const latter = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  console.log(res);
 };

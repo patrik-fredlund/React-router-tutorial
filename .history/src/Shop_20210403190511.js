@@ -25,10 +25,13 @@ export const Shop = () => {
 
     //async & await - to fetch data
 
-    axios
-      .get('https://jsonplaceholder.typicode.com/posts')
+    axios.get('https://jsonplaceholder.typicode.com/posts');
+    console
+      .log('test')
+
       .then((res) => setData(res.data));
-    console.log(data.splice(0, 5));
+
+    // console.log(data.splice(0, 5));
   }, []);
 
   //axios - fetch data
@@ -37,7 +40,7 @@ export const Shop = () => {
     <div>
       <ul>
         {data.map((item) => {
-          return <li key={item.id}>{item.title}</li>;
+          return <li key={item.id}>{item.body}</li>;
         })}
       </ul>
     </div>

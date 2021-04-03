@@ -31,13 +31,17 @@ export const Shop = () => {
     console.log(data.splice(0, 5));
   }, []);
 
+  const latter = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+    console.log(res);
+  };
   //axios - fetch data
 
   return (
     <div>
       <ul>
         {data.map((item) => {
-          return <li key={item.id}>{item.title}</li>;
+          return <li key={item.id}>{item.body}</li>;
         })}
       </ul>
     </div>

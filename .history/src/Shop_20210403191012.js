@@ -37,7 +37,7 @@ export const Shop = () => {
     <div>
       <ul>
         {data.map((item) => {
-          return <li key={item.id}>{item.title}</li>;
+          return <li key={item.id}></li>;
         })}
       </ul>
     </div>
