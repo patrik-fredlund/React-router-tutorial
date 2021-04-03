@@ -19,7 +19,7 @@ export const Shop = () => {
     // }, []);
     //async & await - to fetch data
 
-    axios
+    axio
       .get('https://jsonplaceholder.typicode.com/posts')
       .then((res) => setData(res.data));
     console.log(data.splice(0, 5));

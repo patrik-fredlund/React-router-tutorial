@@ -1,0 +1,21 @@
+import React, { useState, useEffect } from 'react';
+
+export const Shop = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => response.json())
+      .then((data) => setData(data.splice(0, 10)));
+  }, []);
+
+  return (
+    <div>
+      <ul>
+        {data.map((item) => {
+          return <li key={item.id}>{item.body}</li>;
+        })}
+      </ul>
+    </div>
+  );
+};

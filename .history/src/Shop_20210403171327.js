@@ -21,8 +21,7 @@ export const Shop = () => {
 
     axios
       .get('https://jsonplaceholder.typicode.com/posts')
-      .then((res) => setData(res.data));
-    console.log(data.splice(0, 5));
+      .then((res) => seData(res.data));
   }, []);
 
   return (
